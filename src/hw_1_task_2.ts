@@ -12,5 +12,5 @@ export function processData(data: string | number | boolean | number[]): string 
         return data.map(i => i * i);
     }
     
-    throw new Error('Invalid input type');
+    throw new Error('Input correct value');
 }
