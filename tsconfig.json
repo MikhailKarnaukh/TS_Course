@@ -1,11 +1,13 @@
 {
   "compilerOptions": {
     "target": "ES6",
-    "module": "NodeNext", 
+    "module": "NodeNext",
     "moduleResolution": "NodeNext",
     "outDir": "./dist",
     "rootDir": "./src",
-    "strict": true
+    "strict": true,
+    "allowJs": true,
+    // "checkJs": true
   },
-  "include": ["src/**/*", "dist/hw_2_task_1-8.js"]
+  "include": ["src/**/*"]
 }

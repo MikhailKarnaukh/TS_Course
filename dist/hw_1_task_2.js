@@ -14,5 +14,5 @@ export function processData(data) {
         }
         return data.map(i => i * i);
     }
-    throw new Error('Invalid input type');
+    throw new Error('Input correct value');
 }
