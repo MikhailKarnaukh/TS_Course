@@ -3,6 +3,7 @@ import { processData } from './hw_1_task_2.js';
 import { getFigureInfo } from './hw_1_task_3.js';
 import { findMin, findUnique, lastElem, randArray, toUpper } from './hw_2_task_1-8.js';
 import { propsCount, showProps, Student, Worker, Triangle as TriangleClass, Square, Circle as CircleClass, handleFigures } from './hw_3_task_1-5.js';
+import { getPromise, calcArrProduct, showNumbers, showNumbersAsync } from './hw_4_task_1-4.js';
 const employee = {
     name: "Alex Brown",
     profession: "doctor",
@@ -97,3 +98,10 @@ workers.forEach(worker => {
 });
 const figures = [new TriangleClass(4, 5), new Square(7), new CircleClass(5)];
 console.log(handleFigures(figures));
+getPromise("test promise", 2000).then(function (data) {
+    console.log(data);
+});
+calcArrProduct([3, 4, 5]).then(result => console.log(result));
+calcArrProduct([5, "user2", 7, 12]).then(result => console.log(result));
+showNumbers();
+showNumbersAsync();
