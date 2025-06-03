@@ -5,8 +5,9 @@ import { findMin, findUnique, lastElem, randArray, toUpper } from './hw_2_task_1
 import {propsCount, showProps, Student, Worker, Triangle as TriangleClass, Square, Circle as CircleClass, handleFigures} from './hw_3_task_1-5.js';
 import {getPromise, calcArrProduct, showNumbers, showNumbersAsync} from './hw_4_task_1-4.js';
 import { SortFunction, superSort, Parcel, PackageStatus, Admin } from './hw_5_task_1-3.js';
+import { display, identity, Manager } from './hw_6_task_1-3.js';
 
-const employee: Employee = {
+/* const employee: Employee = {
     name: "Alex Brown",
     profession: "doctor",
     worworkingHoursPerDay: 10
@@ -170,4 +171,24 @@ admin.changePassword('Weak');
 console.log(admin.passwordPreview);
 
 admin.changePassword('Super-Pass');
-console.log(admin.passwordPreview);
+console.log(admin.passwordPreview); */
+
+display("1"); 
+display("2", "3"); 
+display(["4", "5", "6"]); 
+
+const data = [
+  { item: "item1", rating: 2 },
+  { item: "item2", rating: 3 },
+  { item: "item3", rating: 4 },
+  { item: "item4", rating: 5 },
+  { item: "item5", rating: 6 },
+  { item: "item6", rating: 7 },
+];
+
+console.log(identity(data));
+
+const manager = new Manager();
+console.log(manager.task);
+console.log(manager.project);
+console.log((manager as any).employmentDate);
