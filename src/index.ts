@@ -4,6 +4,7 @@ import { Triangle, Rectangle, Circle, getFigureInfo } from './hw_1_task_3.js';
 import { findMin, findUnique, lastElem, randArray, toUpper } from './hw_2_task_1-8.js';
 import {propsCount, showProps, Student, Worker, Triangle as TriangleClass, Square, Circle as CircleClass, handleFigures} from './hw_3_task_1-5.js';
 import {getPromise, calcArrProduct, showNumbers, showNumbersAsync} from './hw_4_task_1-4.js';
+import { SortFunction, superSort, Parcel, PackageStatus, Admin } from './hw_5_task_1-3.js';
 
 const employee: Employee = {
     name: "Alex Brown",
@@ -129,3 +130,44 @@ calcArrProduct ( [5,"user2", 7, 12]).then(result => console.log(result));
 
 showNumbers();
 showNumbersAsync();
+
+let names = ["Vlad", "Ira", "Nina", "Alex"];
+console.log(superSort(names, "asc"));
+
+const func: SortFunction = superSort;
+const result = func(["A", "C", "D", "B"], "desc");
+console.log(result);
+
+const item: Parcel = {
+  id: 224,
+  weight: 22.5,
+  dimensions: {
+    length: 105,
+    width: 44,
+    height: 50.5
+  },
+  sender: "Vlad Tymo",
+  description: "Super power inside.",
+  status: PackageStatus.Pending,
+
+  deliver(isSuccess: boolean) {
+    this.status = isSuccess
+      ? PackageStatus.Delivered
+      : PackageStatus.Lost;
+  },
+
+  get statusName() {
+    return PackageStatus[this.status];
+  }
+};
+
+item.deliver(true);
+console.log(item.statusName);
+
+const admin = new Admin('admin@gmail.com', 'Qwerty');
+
+admin.changePassword('Weak');
+console.log(admin.passwordPreview);
+
+admin.changePassword('Super-Pass');
+console.log(admin.passwordPreview);
