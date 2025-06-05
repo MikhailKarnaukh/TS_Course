@@ -7,7 +7,7 @@ import {getPromise, calcArrProduct, showNumbers, showNumbersAsync} from './hw_4_
 import { SortFunction, superSort, Parcel, PackageStatus, Admin } from './hw_5_task_1-3.js';
 import { display, identity, Manager } from './hw_6_task_1-3.js';
 
-/* const employee: Employee = {
+const employee: Employee = {
     name: "Alex Brown",
     profession: "doctor",
     worworkingHoursPerDay: 10
@@ -171,7 +171,7 @@ admin.changePassword('Weak');
 console.log(admin.passwordPreview);
 
 admin.changePassword('Super-Pass');
-console.log(admin.passwordPreview); */
+console.log(admin.passwordPreview);
 
 display("1"); 
 display("2", "3"); 
